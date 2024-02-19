@@ -63,45 +63,45 @@ section {
     background-color: var(--colorDarkYellow);
 }
 
-body{
+body {
     background-color: grey;
 }
 
-.modal{
+.modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-y: scroll;
     align-items: center;
     justify-content: center;
     z-index: 6000;
-    background: rgba(0,0,0,.4)
+    background: rgba(0, 0, 0, .4)
 }
 
-.modal_content{
+.modal_content {
     background-color: var(--colorWhite);
     width: 100vw;
     max-width: 960px;
     position: relative;
     z-index: 2;
-    height: 100%;
+    height: 800px;
     margin: 0 auto;
     padding: 5% 3%;
 }
 
-.collection .collection_head .collection_gallery{
+.collection .collection_head .collection_gallery {
     display: flex;
     justify-content: space-between;
 }
 
-.photo_gallery_media img{
-    width: 200px;
-    height: 180px;
+.photo_gallery_media img {
+    width: 400px;
+    height: 280px;
 }
 
-.photo_gallery_list_item img{
+.photo_gallery_list_item img {
     display: flex;
     width: 70px;
     height: 60px;
@@ -116,49 +116,49 @@ body{
     margin-top: 24px
 }
 
-.modal .collection .collection_rating{
-display: flex;
-margin: 1rem 0;
+.modal .collection .collection_rating {
+    display: flex;
+    margin: 1rem 0;
 }
 
-.modal .collection .collection_rating_button{
+.modal .collection .collection_rating_button {
     background-color: var(--colorWhite);
     color: var(--colorBlue);
     font-weight: 600;
     margin: 0 1rem;
 }
 
-.modal .collection .collection_content .rating i{
+.modal .collection .collection_content .rating i {
     color: var(--colorGrey);
 }
 
-.modal .collection .collection_price{
+.modal .collection .collection_price {
     width: 430px;
     height: 100px;
     background-color: var(--colorLightGrey);
 }
 
-.modal .collection .collection_price{
+.modal .collection .collection_price {
     margin-bottom: 1rem;
     border-radius: 10px;
 }
 
-.modal .collection .collection_price p{
+.modal .collection .collection_price p {
     font-size: 2rem;
     font-weight: 800;
     padding: 1.2rem;
 }
 
-.modal .collection .collection_color_list{
+.modal .collection .collection_color_list {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: var(--colorWhite);
-    border: 1px solid  var(--colorBlack);
+    border: 1px solid var(--colorBlack);
     margin: 1.3rem 0;
 }
 
-.modal .collection .collection_color_button{
+.modal .collection .collection_color_button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -167,25 +167,145 @@ margin: 1rem 0;
     margin: 5px;
 }
 
-.modal .collection .collection_control .collection_cart_control{
-display: flex;
-justify-content: space-between;
-width: 120px;
-height: 50px;
-background-color: var(--colorWhite);
-border: 1px solid var(--colorGrey);
-border-radius: 10px;
+/* .modal .collection .collection_control{
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+} */
+
+.modal .collection .collection_control .collection_cart_control {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    height: 50px;
+    background-color: var(--colorWhite);
+    border: 1px solid var(--colorGrey);
+    border-radius: 10px;
 }
 
-.modal .collection .collection_control .collection_cart_control .counter{
+.modal .collection .collection_control .collection_cart_control .counter {
     display: flex;
     align-items: center;
     justify-content: space-around;
+  
 }
 
-.modal .collection .collection_control .collection_cart_control .counter button, 
-.modal .collection .collection_control .collection_cart_control .counter span{
+.modal .collection .collection_control .collection_cart_control .counter button,
+.modal .collection .collection_control .collection_cart_control .counter span {
     font-size: 1rem;
     margin: 0 15px;
     background-color: var(--colorWhite);
+}
+
+.modal .collection .collection_control .collection_cart.full{
+    display: none;
+}
+
+.modal .collection .collection_control .btn{
+    display: block;
+    width: 430px;
+}
+
+.modal .collection .collection_body{
+    width: 880px;
+    height: 280px;
+    margin-top: 40px;
+}
+
+.modal .collection .collection_body .collapse_head{
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: var(--colorWhite);
+    margin-bottom: 10px;
+}
+
+.modal .collection .collection_body .collapse{
+    margin: 40px 0 ;
+}
+
+.modal .collection .collection_body .collapse .collapse_recorde span{
+    font-size: .9rem;
+    color: var(--colorDarkAlpha);
+}
+
+.modal .collection .collection_body .collapse_body{
+    margin-bottom: 40px;
+}
+
+.modal .collection .collection_body .collapse_body .collection_reviews{
+    margin-top: 55px;
+}
+
+.modal .collection .collection_body .collection_reviews_head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .collection .collection_body .collection_reviews_title{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.modal .collection .collection_body .collection_reviews_title span{
+    color: var(--colorDarkAlpha) ;
+}
+
+.modal .collection .collection_body .collection_reviews_head .btn_link{
+   background-color: var(--colorWhite);
+   color: var(--colorBlue);
+}
+
+
+
+/* media------------------------------------------------- */
+
+@media(max-width: 900px){
+    .collection_title{
+        font-size: 15px;
+    }
+    .photo_gallery_media img{
+        width: 250px;
+        height: 200px;
+    }
+
+    .collection .collection_head .collection_gallery{
+        margin: 0;
+    }
+
+    .collection .collection_head .collection_price{
+        width: 300px;
+    }
+    .collection_content {
+        width: 300px;
+    }
+
+    .collection_control{
+        width: 300px;
+        margin-right: 20px;
+    }
+
+    .collection_reviews{
+        width: 600px;
+    }
+    
+}
+
+@media(max-width: 765px){
+    .modal_content{
+        height: 1100px;
+    }
+    .collection_gallery{
+        flex-wrap: wrap;
+    }
+    
+    .collection_reviews{
+        width: 400px;
+    }
+}
+
+@media(max-width: 470px){
+    .collection_control{
+        width: 100px;
+        margin-right: 100px;
+    }
 }
